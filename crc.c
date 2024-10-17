@@ -20,6 +20,8 @@ void crcDivision(char *dividend, const char *divisor, int dividendLen, int divis
             xorOperation(&dividend[currentPos], divisor, divisorLen);
         }
         currentPos++;
+        printf(dividend);
+        printf("\n");
     }
 }
 

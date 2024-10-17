@@ -26,7 +26,7 @@ int main()
     printf("\n\tClient -with individual acknowledgement scheme\n\n");
     char msg1[50] = "akwnowledgementof-";
     char msg2[50];
-    //	char msg3[50]="Final cumulative aknowledgement";
+    char msg3[50] = "Final cumulative aknowledgement";
     char buff[100];
     int flag = 1, flg = 1;
     for (int i = 0; i <= 9; i++)
