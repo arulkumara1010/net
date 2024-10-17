@@ -3,7 +3,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <arpa/inet.h>
-#include <asm-generic/socket.h>
 
 #define PORT 8080
 #define BUFFER_SIZE 1024
@@ -18,14 +17,6 @@ int main()
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0)
     {
         perror("Socket failed");
-        exit(EXIT_FAILURE);
-    }
-
-    int opt = 1;
-    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt)))
-    {
-        perror("setsockopt failed");
-        close(server_fd);
         exit(EXIT_FAILURE);
     }
 
