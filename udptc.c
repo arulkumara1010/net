@@ -39,7 +39,7 @@ int main()
         len = sizeof(servaddr);
         n = recvfrom(sockfd, (char *)buffer, BUFFER_SIZE, MSG_WAITALL, (struct sockaddr *)&servaddr, &len);
         buffer[n] = '\0';
-        printf("Server: %s\n", buffer);
+        printf("Server: %s", buffer);
     }
 
     close(sockfd);
